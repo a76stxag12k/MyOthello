@@ -1,7 +1,14 @@
 <?php
     session_start();
 
-    require('const.php');
+    require_once('const.php');
+    require_once('env.php');
+    require_once('api.php');
+
+    if (!canPlay()) {
+        echo 'error!';
+        exit;
+    }
 
     $ret = "ok!";
     $logName = 'othello.log';
@@ -42,12 +49,6 @@
             $sql .= "    SYSDATE()";
             $sql .= ");";
         
-            $dsn = 'mysql:dbname=othello;host=localhost';
-            $user = 'testuser';
-            $password = 'testuser';
-            // $dbh = null;
-            // $stmt = null;
-            
             try {
 
                 $dbh = new PDO($dsn, $user, $password);

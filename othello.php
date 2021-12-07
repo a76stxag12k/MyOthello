@@ -1,5 +1,14 @@
 <?php
 	session_start();
+
+    require_once('const.php');
+    require_once('env.php');
+    require_once('api.php');
+
+    if (!canPlay()) {
+        echo 'error!';
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +30,7 @@
     <div id="boxs">
         <div class="box" id="skip">skip</div>
         <div class="box" id="reset">reset</div>
+        <!-- <div class="box" id="list">list</div> -->
     </div>
     <script src="js/constants.js"></script>
     <script src="js/global.js"></script>
