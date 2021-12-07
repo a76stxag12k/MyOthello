@@ -65,6 +65,29 @@
                 file_put_contents($logName, $log, FILE_APPEND | LOCK_EX);
                 // die();
             }
+
+            $stmt = null;
+            // $dbh = null;
+
+            $sql  = "delete from game_result ";
+            $sql .= "where ";
+            $sql .= "    not exists( ";
+            $sql .= "        select * from (select * from game_result t2 order by t2.reg_dt desc limit 10) t3 ";
+            $sql .= "        where game_result.id = t3.id ";
+            $sql .= "    )";
+
+            try {
+                // $dbh = new PDO($dsn, $user, $password);
+                $stmt = $dbh->prepare($sql);
+                $stmt->execute();
+            }
+            catch (PDOException $e) {
+                $ret = "db error!";
+                $log = 'Error:'.$e->getMessage() .PHP_EOL;
+                file_put_contents($logName, $log, FILE_APPEND | LOCK_EX);
+                // die();
+            }
+
             $stmt = null;
             $dbh = null;
         }
