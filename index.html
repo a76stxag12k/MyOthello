@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>My Name</title>
 </head>
 <body>
     <div>
-        名前を入力してください。
+        登録情報を入力してください。
         <form action="name.php" method="post">
-            <label for="myid">ID:</label>
-            <input type="text" name="myid" id="playerid"><br>
-            <label for="mypw">パスワード</label>
-            <input type="password" name="mypw" id="playerpw"><br>
-            <label for="myname">名前</label>
-            <input type="text" name="myname" id="playername"><br>
+            <dl>
+                <dt>
+                    <label for="myid">ID:</label>
+                </dt>
+                <dd>
+                    <input type="text" name="myid" id="playerid">
+                </dd>
+                <dt>
+                    <label for="mypw">パスワード:</label>
+                </dt>
+                <dd>
+                    <input type="password" name="mypw" id="playerpw">
+                </dd>
+                <dt>
+                    <label for="myname">名前:</label>
+                </dt>
+                <dd>
+                    <input type="text" name="myname" id="playername">
+                </dd>
+            </dl>
             <input type="submit" value="登録">
         </form>
     </div>
