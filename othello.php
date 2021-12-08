@@ -30,7 +30,7 @@
     <div id="boxs">
         <div class="box" id="skip">skip</div>
         <div class="box" id="reset">reset</div>
-        <!-- <div class="box" id="list">list</div> -->
+        <div class="box" id="list">list</div>
     </div>
     <script src="js/constants.js"></script>
     <script src="js/global.js"></script>

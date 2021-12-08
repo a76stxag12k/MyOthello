@@ -122,17 +122,11 @@
     box-shadow: none;
 }
 
-#skip {
+#skip, #reset, #list  {
     background:gray;
+    margin-left: 2px;
+    margin-right: 2px;
 }
-
-#reset {
-    background:gray;
-}
-
-/* #list {
-    background:gray;
-} */
 
 body {
     width: 100%;
@@ -167,7 +161,7 @@ body {
 }
 
 form {
-    background-color: #D3D3D3;
+    background-color: #CCC;
     padding: 20px 50px;
 }
 
@@ -180,4 +174,41 @@ form dl dt {
 
 form dl dd {
     padding: 4px 0;
+}
+
+.ttitle {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table.brtable {
+    border-collapse: collapse;
+    border: 2px solid gray; /* äOòg */
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+table.brtable td,
+table.brtable th {
+    border: 2px solid gray;  /* ì‡òg */
+    padding: 0.25em;
+}
+
+table.brtable thead th {
+    border-bottom: 5px double gray; /* â∫ê¸ */
+    background: #ccc;
+}
+
+div.btn_back {
+    text-align:center;
+}
+
+.btn_back button {
+    text-align: center;
+    cursor: pointer;
 }

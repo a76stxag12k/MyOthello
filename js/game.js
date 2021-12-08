@@ -228,6 +228,7 @@ function canOppContinue() {
 async function init() {
 	setSkipEvent();
 	setResetEvent();
+    setListEvent();
 
     createBorad();
     initializeBorad();
@@ -251,6 +252,15 @@ function setResetEvent()
     const er = document.getElementById('reset');
     er.addEventListener('click', () => {
         window.location.href = 'reload.php';
+    });
+}
+
+// リスト(対戦成績)ボタンイベント
+function setListEvent()
+{
+    const er = document.getElementById('list');
+    er.addEventListener('click', () => {
+        window.location.href = 'list.php';
     });
 }
 
