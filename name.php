@@ -22,6 +22,11 @@
         exit;
     }
 
+    if (strlen($_POST['myname']) > 20) {
+        echo 'error!';
+        exit;
+    }
+
     $_SESSION['myid'] = $_POST['myid'];
     $_SESSION['mypw'] = $_POST['mypw'];
     $_SESSION['myname'] = $_POST['myname'];
